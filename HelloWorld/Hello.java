@@ -10,7 +10,9 @@ class Hello { // since java is Object Oriented everythingneeds to be in a class 
         // java is a strongly typed language so you have to declare types of variables
         // when assigning //
         int num = 3;
-        System.out.println(num);
+        int num2 = 5;
+        int result = num + num2;
+        System.out.println(result);
 
     } // this signifies the end of a block and it does not need a semicolon
 }
