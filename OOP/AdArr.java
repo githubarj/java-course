@@ -29,7 +29,7 @@ public class AdArr {
         students[2] = s3;
 
         for (Student i : students){
-            System.out.println(i);
+            System.out.println(i.name + " : " + i.marks);
         }
 
     }
