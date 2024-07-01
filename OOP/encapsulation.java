@@ -10,6 +10,16 @@ class Human {
         // you can initialize the values of the object here
         age = 12;
         name = "John";
+    } // default constructor
+
+    public Human ( int age, String name) {
+            this.age = age;
+            this.name = name;
+    }
+
+    public Human ( String name ) {
+        this.name = name;
+        this.age = 12;
     }
 
 
@@ -40,7 +50,7 @@ public class encapsulation {
     h1.setAge(40);
     h1.setName("Richard");
     System.out.println("You can get the values by using the functions, age : " + h1.getAge() + " and name : " + h1.getName());
-    Human h2 = new Human();
+    Human h2 = new Human(20, "Richard");
     System.out.println(h2.getName());
     }
 }
