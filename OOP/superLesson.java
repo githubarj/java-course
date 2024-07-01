@@ -22,9 +22,25 @@ class B  extends A {
      }
 }
 
+class C {
+    public C(){
+        System.out.println("in C");
+    }
+
+    public void  show () {
+        System.out.println("show");
+    }
+}
+
 public class superLesson {
     public static void main(String[] args) {
         B b = new B(7); // it calls only the parameterized constructor in itself
+        C c; // reference creation
+        c = new C(); // referenced object
+        new C(); // anonymous object
+        new C().show(); // you can use this to call a method on an object without creating a variable
+        // you cant refer to this object
+        c.show();
     }
 }
 
