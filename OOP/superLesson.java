@@ -27,3 +27,8 @@ public class superLesson {
         B b = new B(7); // it calls only the parameterized constructor in itself
     }
 }
+
+// java uses camel casing
+// classes and interface should start with capital letters
+// variables and methods - start with small
+// constants - all capital
