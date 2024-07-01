@@ -1,12 +1,33 @@
 class Human {
-    private int age = 23; // this variable will be only accessible inside this class
-    private String name = "Richard"; //only accessible inside this class
+    private int age; // this variable will be only accessible inside this class
+    private String name; //only accessible inside this class
 
-    public int getAge () { //defined in the same class so can access age and name
-        return age; //way to access the age from outside the class
+    //constructor -  you do not specify a return type
+    // name it the same as your class name
+    public Human (){ // special method
+        // everytime you create anew object it will call
+        // the constructor
+        // you can initialize the values of the object here
+        age = 12;
+        name = "John";
     }
-    public String getName () {
+
+
+    public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        //we use this because preference is given to local variable
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age; //refers to the object calling this method
     }
 }
 
@@ -16,6 +37,10 @@ public class encapsulation {
     public static void main (String [] args){
 
     Human h1 = new Human();
-    System.out.println("You can get the values by using the functions" + h1.getAge());
+    h1.setAge(40);
+    h1.setName("Richard");
+    System.out.println("You can get the values by using the functions, age : " + h1.getAge() + " and name : " + h1.getName());
+    Human h2 = new Human();
+    System.out.println(h2.getName());
     }
 }
