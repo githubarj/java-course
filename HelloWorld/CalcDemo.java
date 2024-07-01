@@ -1,3 +1,5 @@
+
+
 public class CalcDemo {
     public static void main(String[] args) {
 
@@ -9,3 +11,6 @@ public class CalcDemo {
         System.out.println(obj1.power(5, 4));
     }
 }
+
+// in java multiple inheritance does not work
+// but multilevel and single level inheritance work
