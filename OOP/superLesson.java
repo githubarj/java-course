@@ -16,13 +16,14 @@ class B  extends A {
         // whenever you create an object it will call the constructor
     }
      public B (int x){ // parameterized constructor
-        super(x);
+//        super(x);
+         this(); // it will call the constructor of the same class
          System.out.println("in B int");
      }
 }
 
 public class superLesson {
     public static void main(String[] args) {
-        B b = new B(); // it calls only the parameterized constructor in itself
+        B b = new B(7); // it calls only the parameterized constructor in itself
     }
 }
