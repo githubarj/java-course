@@ -1,14 +1,33 @@
 
+class V {
+    public void show () {
+        System.out.println("in v show");
+    }
+    public void config (){
+        System.out.println("in v config");
+    }
+}
+
+class T extends V {
+    public void show (){ // method overriding same name as in super class but different function definition
+        System.out.println("in T show");
+    }
+
+}
+
+// difference between method overloading and overriding is that
+// method overriding - same name and parameters
+// overloading - same name , different parameters
+
+
+
 
 public class CalcDemo {
     public static void main(String[] args) {
 
-        ScientificCalculator obj1 = new ScientificCalculator();
-        System.out.println(obj1.add(2, 3));
-        System.out.println(obj1.sub(5, 4));
-        System.out.println(obj1.multiply(5, 4));
-        System.out.println(obj1.divide(5, 4));
-        System.out.println(obj1.power(5, 4));
+        T obj = new T();
+        obj.show();
+        obj.config();
     }
 }
 
