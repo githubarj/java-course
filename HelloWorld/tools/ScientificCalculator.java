@@ -1,5 +1,6 @@
+package tools;
 public class ScientificCalculator extends AdvancedCalc {
-    public double power(int a, int b) {
+    public double power(double a, int b) {
         return Math.pow(a, b);
     }
 }
