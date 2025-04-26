@@ -9,7 +9,7 @@ public class SelectionSort {
     }
     // implementing it by starting with the smallest value
     public static int[] selectionSort(int[] nums) {
-        for (int i = 0; i < nums.length ; i++) {
+        for (int i = 0; i < nums.length - 1  ; i++) {
             // Assume that the current unsorted element is the smallest
             int minIndex = i;
             for ( int j = i + 1 ; j < nums.length; j ++){
