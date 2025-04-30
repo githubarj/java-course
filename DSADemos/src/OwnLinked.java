@@ -39,7 +39,52 @@ public class OwnLinked {
                 current = current.next;
             }
         }
+
+        public void addBegining(int data){
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+        }
+
+        public void pop(){
+            Node current = head;
+            while(current.next.next != null){
+                current = current.next;
+            }
+            current.next = null;
+        }
+
+        public void delete(int data){
+          // in case of an empty list
+            if(head == null) {
+                System.out.println("List is empty");
+
+                // handle deleting head node
+                if (head.data == data){
+                    head = head.next; // just set the head to the next value after current head
+                    return;
+                }
+
+                Node current = head;
+                Node prev = null; // keep track of previous node
+
+                while (current != null && current.data != data){
+                    prev = current; // keep track
+                    current = current.next;  // change to next
+                }
+
+                // if the value does not exist
+                if (current == null){
+                    System.out.println("Node with data " + data + " not found");
+                    return;
+                }
+
+                prev.next = current.next;
+            }
+        }
     }
+
+    // the node is garbage collected by the JVM because it had no node referencing it
 
     public static void main (String[] args){
         LinkedList nums = new LinkedList();
@@ -47,6 +92,8 @@ public class OwnLinked {
         nums.add(5);
         nums.add(9);
         nums.add(10);
+        nums.addBegining(120);
+        nums.pop();
 
         nums.printValues();
     }
