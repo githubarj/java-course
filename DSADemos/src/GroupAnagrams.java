@@ -82,4 +82,21 @@ public class GroupAnagrams {
     }
 
 
+    public static List<List<String>> anagramsPractice(String[] strs) {
+        Map<String, ArrayList<String>> ansMap = new HashMap<>();
+        for (String s : strs) {
+            char tempArray[] = s.toCharArray();
+            Arrays.sort(tempArray); // sort the letters
+
+            String key = new String(tempArray);
+
+            ansMap.putIfAbsent(key, new ArrayList<String>());
+
+            ansMap.get(key).add(s);
+        }
+
+        return new ArrayList<>(ansMap.values());
+    }
+
+
 }
